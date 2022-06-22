@@ -1,0 +1,375 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", serif;
+}
+p {
+  font-family: "Ubuntu", sans-serif;
+}
+body {
+  min-height: 100vh;
+  background: linear-gradient(45deg, #fff, #82c9f8) fixed;
+}
+body.dark {
+  /* background: linear-gradient(45deg, #4e65ff, #92effd); */
+  background: linear-gradient(45deg, #19325c, #090d31) fixed;
+  color: white;
+}
+.parallax-container {
+  background-image: url("https://freepngimg.com/thumb/cloud/7-cloud-png-image.png");
+}
+.cloud {
+  animation: animate 8s linear infinite;
+  max-width: 100%;
+}
+@keyframes animate {
+  0% {
+    transform: translateX(-100);
+  }
+}
+
+.navigation {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 120px;
+  height: 60px;
+  background: #fff;
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  transition: height 0.5s, width 0.5s;
+  transition-delay: 0s, 0.75s;
+  overflow: hidden;
+}
+.navigation.active {
+  width: 300px;
+  height: 240px /*400px*/;
+  transition: width 0.5s, height 0.5s;
+  transition-delay: 0s, 0.75s;
+}
+.navigation .userBx {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+.navigation.active .userBx {
+  width: calc(100% - 60px);
+  transition-delay: 0s;
+}
+.navigation .userBx .username {
+  white-space: nowrap;
+  color: #555;
+  font-size: 1.1em;
+}
+.navigation .userBx .imgBx {
+  position: relative;
+  min-width: 60px;
+  height: 60px;
+  overflow: auto;
+  background: #000;
+  border-radius: 50%;
+  border: 10px solid #fff;
+}
+.navigation .userBx .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.navigation .menuToggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navigation .menuToggle::before {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 2px;
+  background: #555;
+  transform: translateY(-10px);
+  box-shadow: 0 10px #555;
+  transition: 0.5s;
+}
+.navigation .menuToggle::after {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 2px;
+  background: #555;
+  transform: translateY(10px);
+  transition: 0.5s;
+}
+.navigation.active .menuToggle::before {
+  transform: translateY(0px) rotate(45deg);
+  box-shadow: 0 0 #555;
+}
+.navigation.active .menuToggle::after {
+  transform: translateY(0px) rotate(-45deg);
+}
+.menu {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 60px);
+  margin-top: 60px;
+  padding: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.menu li {
+  list-style: none;
+}
+.menu li a {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  font-size: 1em;
+  gap: 10px;
+  text-decoration: none;
+  color: #555;
+}
+.menu li a:hover {
+  color: #4e65ff;
+}
+.menu li a ion-icon {
+  font-size: 1.5em;
+}
+
+/* View Pager */
+#root2 {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  cursor: url("https://uploads.codesandbox.io/uploads/user/b3e56831-8b98-4fee-b941-0e27f39883ab/Ad1_-cursor.png")
+      39 39,
+    auto;
+}
+
+#root2 > div {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  will-change: transform;
+}
+
+#root2 > div > div {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+  box-shadow: 0 62.5px 125px -25px rgba(50, 50, 73, 0.5),
+    0 37.5px 75px -37.5px rgba(0, 0, 0, 0.6);
+}
+
+.introduce-title{
+  color: rgb(46, 142, 231);
+}
+
+.contact-me button:hover {
+  /* background: rgb(59 130 246); */
+  color: rgb(46, 142, 231);
+  box-shadow: 0 0 5px #fff, 0 0 25px #fff, 0 0 50px #fff, 0 0 200px #fff;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+  bottom: 0;
+  right: 0;
+  /* width: 100%; */
+  /* height: 2px; */
+  background: linear-gradient(270deg, transparent, rgb(221, 255, 252));
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid rgb(5, 197, 5); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  /*letter-spacing: 0.05em;   Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(6, 197, 6);
+  }
+}
+
+/*the lightbox*/
+/* :root {
+  --dark: #373349;
+  --shadow: rgba(0, 0, 0, 0.2);
+} */
+
+.html,
+.body {
+  background-color: var(--dark);
+  margin: 5px;
+}
+
+.container > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+
+.container > a > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0 2px 16px var(--shadow);
+}
+
+.container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-auto-rows: 120px;
+  grid-auto-flow: dense;
+}
+
+.horizontal {
+  grid-column: span 2;
+}
+
+.vertical {
+  grid-row: span 2;
+}
+
+.big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+/*video wrapper*/
+
+/* // Gradients taken from: https://webgradients.com/
+export default [
+  {
+    name: 'Rare Wind',
+    description: '#a8edea → #fed6e3',
+    css: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)',
+    height: 200,
+  },
+  {
+    name: 'Saint Petersburg',
+    description: '#f5f7fa → #c3cfe2',
+    css: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)',
+    height: 400,
+  },
+  {
+    name: 'Deep Blue',
+    description: '#e0c3fc → #8ec5fc',
+    css: 'linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%)',
+    height: 400,
+  },
+  {
+    name: 'Ripe Malinka',
+    description: '#f093fb → #f5576c',
+    css: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+    height: 400,
+  },
+  {
+    name: 'Perfect White',
+    description: '#fdfbfb → #ebedee',
+    css: 'linear-gradient(135deg, #E3FDF5 0%, #FFE6FA 100%)',
+    height: 400,
+  },
+  {
+    name: 'Near Moon',
+    description: '#5ee7df → #b490ca',
+    css: 'linear-gradient(135deg, #5ee7df 0%, #b490ca 100%)',
+    height: 400,
+  },
+  {
+    name: 'Wild Apple',
+    description: '#d299c2 → #fef9d7',
+    css: 'linear-gradient(135deg, #d299c2 0%, #fef9d7 100%)',
+    height: 200,
+  },
+  {
+    name: 'Ladoga Bottom',
+    description: '#ebc0fd → #d9ded8',
+    css: 'linear-gradient(135deg, #ebc0fd 0%, #d9ded8 100%)',
+    height: 400,
+  },
+  {
+    name: 'Sunny Morning',
+    description: '#f6d365 → #fda085',
+    css: 'linear-gradient(135deg, #f6d365 0%, #fda085 100%)',
+    height: 200,
+  },
+  {
+    name: 'Lemon Gate',
+    description: '#96fbc4 → #f9f586',
+    css: 'linear-gradient(135deg, #96fbc4 0%, #f9f586 100%)',
+    height: 400,
+  },
+  {
+    name: 'Salt Mountain',
+    description: ' #FFFEFF → #D7FFFE',
+    css: 'linear-gradient(135deg, #FFFEFF 0%, #D7FFFE 100%)',
+    height: 200,
+  },
+  {
+    name: 'New York',
+    description: ' #fff1eb → #ace0f9',
+    css: 'linear-gradient(135deg, #fff1eb 0%, #ace0f9 100%)',
+    height: 400,
+  },
+  {
+    name: 'Soft Grass',
+    description: ' #c1dfc4 → #deecdd',
+    css: 'linear-gradient(135deg, #c1dfc4 0%, #deecdd 100%)',
+    height: 400,
+  },
+  {
+    name: 'Japan Blush',
+    description: ' #ddd6f3 → #faaca8',
+    css: 'linear-gradient(135deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%)',
+    height: 200,
+  },
+] */
