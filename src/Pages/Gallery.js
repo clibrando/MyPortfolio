@@ -17,7 +17,7 @@ const CardData = [
       {
         Title: "Github",
         ImageIcon: "FaGithub",
-        href: "https://github.com/clibrando/MyPortfolio",
+        href: "https://github.com/clibrando/portfolio",
       },
     ],
   },
@@ -40,6 +40,23 @@ const CardData = [
   },
   {
     Id: 3,
+    Title: "Styled Cards",
+    ImageFileName: "https://i.imgur.com/LYMmNLc.png",
+    Link: "https://i.imgur.com/LYMmNLc.png",
+    Description:
+      "Using tailwind & react I created some stylized cards based on material UI",
+    HashTags: ["Design", "Front-end"],
+    Type: "Web",
+    Buttons: [
+      {
+        Title: "Try it on codesandbox",
+        ImageIcon: "AiFillCodeSandboxSquare",
+        href: "https://codesandbox.io/s/bnzyqt?file=/index.html",
+      },
+    ],
+  },
+  {
+    Id: 4,
     Title: "Image Filtering project",
     ImageFileName: "https://i.imgur.com/heDORr5.png",
     Link: "https://i.imgur.com/heDORr5.png",
@@ -56,7 +73,7 @@ const CardData = [
     ],
   },
   {
-    Id: 4,
+    Id: 5,
     Title: "Animated Menu bar",
     ImageFileName: "https://i.imgur.com/sjPq0kT.png",
     Link: "https://i.imgur.com/sjPq0kT.png",
@@ -73,7 +90,7 @@ const CardData = [
     ],
   },
   {
-    Id: 5,
+    Id: 6,
     Title: "Animated Mobile Fold out",
     ImageFileName: "https://i.imgur.com/zwiSqGd.png?",
     Link: "https://i.imgur.com/zwiSqGd.png?",
@@ -90,7 +107,7 @@ const CardData = [
     ],
   },
   {
-    Id: 6,
+    Id: 7,
     Title: "Animated Profile Dropdown",
     ImageFileName: "https://i.imgur.com/VlRMFaz.png",
     Link: "https://i.imgur.com/VlRMFaz.png",
@@ -107,7 +124,7 @@ const CardData = [
     ],
   },
   {
-    Id: 7,
+    Id: 8,
     Title: "YouGoto",
     ImageFileName: "https://i.imgur.com/3dexZ9x.png",
     Link: "https://i.imgur.com/3dexZ9x.png",
@@ -124,7 +141,7 @@ const CardData = [
     ],
   },
   {
-    Id: 8,
+    Id: 9,
     Title: "Search Education Australia",
     ImageFileName: "https://i.imgur.com/dGddxqw.jpg",
     Link: "https://i.imgur.com/dGddxqw.jpg",
